@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@700&family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  --color-red: #F21D0A;
+  --color-offwhite: #FDFBF7;
+  --color-black: #0F0F0F;
+  --color-white: #FFFFFF;
+  
+  --font-display: 'Anton', sans-serif;
+  --font-hand: 'Caveat', cursive;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-red);
+  color: var(--color-black);
+  cursor: none; /* Hide default cursor for our custom one */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure links also have no cursor since we'll use custom active state */
+a, button {
+  cursor: none;
+}
+
+/* Fallback for touch devices where we want default interaction */
+@media (hover: none) and (pointer: coarse) {
+  *, body, a, button {
+    cursor: auto !important;
+  }
+}
